@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="{{static_url('images/favicon.ico')}}" >
+  <link rel="stylesheet" href="{{static_url('css/style.css')}}" type="text/css" />
+  <script src="{{static_url('js/jquery.js')}}"></script>
+  <script src="{{static_url('js/index.js')}}"></script>
+  <title>DeadLine Killer</title>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+    <img src="{{static_url('images/header-bkg.png')}}">
+    </div>
+    <div id="main">
+      <div id="left">
+        <div class="photo">
+          <img src="{{static_url('images/photo.png')}}" alt="" />
+          <p>姓名:{{name}}</p>
+          <p>学号:{{user}}</p>
+          <a href="/logout" name="logout" class="logout">logout</a>
+        </div>
+      </div>
+      <div id="middle">
+        <div class="title">
+          <h3>我的任务列表</h3>
+          
+        </div>
+        <div id="tasklist">
+          {%for key in tasks%}
+          <div class="task" name="task">
+            <div class="key">
+              {{key}}
+            </div>
+            <div class="discription">
+              <a href=# onclick="">详情</a>
+            </div>
+            <div class="del">
+              <form method="post" action="" id="nameform">
+                <input type="button" value="delete+{{key}}" name="delete" class="hide"> 
+              </form>
+              <button type="submit" form="nameform" class="delete" value="delete+{{key}}" name="delete">delete</button>
+            </div>
+            <div class="clear"></div>
+            <div class="bar" id="bar{{key}}" onmouseover="showCompleted(this)">
+              <img src="{{static_url('images/color2.png')}}" class="colored">
+            </div>
+            <div class="date">
+              <div class="start" id="start">
+                {{tasks[key]["startTime"]}}
+              </div>
+              <div class="end" id="end">
+                {{tasks[key]["endTime"]}}
+              </div>
+            </div>
+          </div>
+          {%end%}
+        </div>
+        <div id="newtask">
+          <button type="button" id="add" class="add" onclick="showbox()">新建任务</button>
+          <div class="hide">
+            <form class="form" method="post" action="" id="form">
+              <textarea name="newtask" class="taskname" placeholder="新任务"></textarea>
+              <!--<p><span>起始时间：</span>
+                <input name="starttime" type="date" class="time" value="2014-12-12">
+              </p>-->
+              截至时间：
+              <input name="endtime" type="date" class="time" value="2014-12-12">
+              <br/>
+              <input type="submit" name="succeed" class="succeed" onmouseover="checkEndDate()" onclick="succeed()" value="创建">
+              <a href="javascript:;" onclick="failed()" class="failed">取消</a>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--<div id="right">
+        ssss
+      </div>-->
+      <div id="clear">
+      </div>
+    </div>
+    <div style="height:80px;">
+    </div>
+  </div>
+</body>
+</html>

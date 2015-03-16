@@ -1,0 +1,24 @@
+#更新时间：2013.10.23
+#更新内容:server.py,distance.py,human_infrared.py,stream.sh
+#联系人:黄晋
+#
+ stream.sh	是控制摄像头的代码，只是直接让摄像头直接工作起来而已
+ tem_wet.c　是用温度传感器检测室内温度和湿度的代码（但是传感器好像坏了）
+ index.html　是在浏览器监控摄像头的代码（网上找到的），可以直接把他发送到你的电脑上面就可以工作
+ wheel 是轮子类
+ car.py	是小车类，继承轮子
+ server.py　是小车的服务器端
+ human_infrared.py	是用人体红外线传感器感应有没有东西从前面或者旁边走过的（感应范围比较广，不容易测试）
+ distance.py 　超声波测距
+ ultrasonic_2.py	是超声波测距的东西，每秒测试一次
+ self_move.py　是一个简单的小车自动寻路文件
+ action.py执行函数
+
+
+Usage of each gpio port
+
+self_move:3
+wheels: left--[18,16],right-->[26,24]
+distance:23[target],21[echo]
+human_infrared:11
+

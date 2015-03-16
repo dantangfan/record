@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>DeadLine Killer</title>
+        <link rel="stylesheet" href="{{static_url('css/login.css')}}" type="text/css" />
+        <link rel="shortcut icon" href="{{static_url('images/favicon.ico')}}" >
+</head>
+<body>
+	   <div class="content">
+           <form action="/login" method="post" class="login-form">
+               <div class="username">
+                   <input type="text" name="username" placeholder="school number" autocomplete="on"/>
+                   <span class="user-icon icon">u</span>
+               </div>
+               <div class="password">
+                   <input type="password" name="password" placeholder="*******" />
+                   <span class="password-icon icon">p</span>
+               </div>
+               <div class="account-control">
+                   <p style="display:inline-block;color:red">Login Error! </p>
+                   <button type="submit" style="margin-left:30px;">Login</button>
+               </div>
+               <p class="follow_me">Any questions or bugs?<a href="https://github.com/sysussuml/deadlinekiller" target="_blank">Tell me now!</a></p>
+           </form>
+	   </div>
+<div style="text-align:center;clear:both">
+</div>
+</body>
+</html>

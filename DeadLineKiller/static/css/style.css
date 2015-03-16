@@ -1,0 +1,328 @@
+html,body,button,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{
+  margin:0;
+  padding:0;
+  border:0;
+  font-family: 'loginform-icon',"Arial","Microsoft YaHei","黑体","宋体",Ubuntu, Helvetica, sans-serif;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline
+}
+
+a {
+  text-decoration:none;
+}
+
+
+body{
+  /*background-color:#efefef;*/
+  background:url('../images/body-bkg.png') no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    -moz-background-size:cover;
+  margin:auto;
+  padding:0;
+  bottom:0;
+  min-height:960px;
+  width:100%;
+}
+
+#wrapper{
+  width:80%;
+  height:100%;
+  margin:auto;
+  position:relative;
+}
+
+#header{
+  position:relative;
+  width:100%;
+  height:170px;
+  margin:auto;
+  /*background:url('../images/header-bkg.png') no-repeat;
+  background-position:center;*/
+}
+
+#header img{
+  width:1083px;
+  height:179px;
+}
+
+#main{
+  font-size:18px;
+  line-height:1.5;
+  margin-left:10px;
+  margin-right:10px;
+  margin-top:30px;
+}
+
+#left{
+  width:20%;
+  float:left;
+}
+
+#left .photo{
+  background-color:#fff;
+  margin-left:5%;
+  margin-right:5%;
+  /*margin-bottom:5%;*/
+  padding-bottom:20px;
+  box-shadow:inset 0 1px 0 #CDC9C9,0 0 10px 3px #AAAAAA;
+}
+
+#left .photo img{
+  margin-left:15%;
+  margin-right:15%;
+  margin-top:15%;
+}
+
+#left .photo p{
+  margin:15%;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+#left .logout{
+    padding:10px 10px 10px 10px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    margin:25%;
+    margin-top:50%;
+    width:68px;
+    height:50px;
+    position:relative;
+    background-color:rgb(80,110,110);
+    background-size:66px 28px,68px 29px;
+    -webkit-transition:background-color 1s;
+    border-radius:5px;
+    text-shadow:0 0 2px rgb(255,255,255);
+    box-shadow:inset 0 1px 0 rgb(86,124,151),0 0 10px 3px rgba(74,162,241,0.5);
+}
+#left .logout:hover{background-color:rgb(150,80,80)}
+
+#middle{
+  float:left;
+  width:80%;
+  /*background:url('body-bkg.png')no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    -moz-background-size:cover;
+  background-color:#fff;*/
+}
+
+#middle .title{
+  margin-left:5%;
+  margin-right:5%;
+}
+
+#middle .title hr{
+  
+}
+#middle .task{
+  margin:3% 3%;
+  margin-bottom:20px;   
+  background-color:#fff;
+  padding:30px 30px;
+  padding-top:20px;
+  box-shadow:inset 0 1px 0 #CDC9C9,0 0 10px 3px #AAAAAA;
+  border-radius:10px;
+}
+
+#middle .task .key{
+  display:inline-block;
+  vertical-align: middle;
+  width:60%;
+  margin-bottom:5px;
+}
+
+#middle .task .discription{
+  display:inline-block; 
+  width:10%;
+  margin-left:2%;
+  margin-rigth:3%;
+  margin-bottom:5px;
+}
+
+#middle .task .del{
+  float:right;
+  width:10%;
+  margin-bottom:10px;
+}
+
+#middle .task .del .delete{
+    padding:1px 1px 1px 1px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    font-size:13px;
+    margin:auto;
+    width:60px;
+    height:20px;
+    border:0;
+    position:relative;
+    background-color:#FF7256;
+    background-size:66px 28px,68px 29px;
+    -webkit-transition:background-color 1s;
+    border-radius:5px;
+}
+#middle .task .bar{
+  background:url('../images/body-bkg.png') no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    -moz-background-size:cover;
+  margin:auto;
+  padding:0;
+  bottom:0;
+  min-height:50px;
+  max-height:50px;
+  margin-left:30px;
+  margin-right:30px;
+  /*border-radius:20px;*/
+}
+
+#middle .task .bar .colored{
+/*  background:#ccc no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+    -moz-background-size:cover;
+  margin:auto;*/
+  width:0;
+  height:50px;
+  padding:0;
+  bottom:0;
+}
+
+#middle .task .date{
+  margin-top:5px;
+
+}
+
+#middle .task .date .start{
+  display:inline-block; 
+  float:left;
+}
+
+#middle .task .date .today{
+  display:inline-block;
+  
+}
+
+#middle .task .date .end{
+  display:inline-block; 
+  float:right; 
+}
+
+
+#middle #newtask{
+  margin-left:5%;
+}
+
+.hide{
+  display:none;
+}
+
+.showbox{
+  margin-left:5%;
+  margin-right:5%;
+}
+
+.add{
+    padding:10px 10px 10px 10px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    margin:auto;
+    width:80px;
+    height:40px;
+    border:0;
+    position:relative;
+    background-color:rgb(80,110,110);
+    background-size:66px 28px,68px 29px;
+    -webkit-transition:background-color 1s;
+    border-radius:5px;
+    font-size:12px;
+}
+.add:hover{background-color:rgb(150,80,80)}
+
+.taskname{
+  display:block;
+  word-wrap:break-word;
+  /*resize:none;*/
+  height:24px;
+  width:60%;
+  font-size:16px;
+  overflow:hidden;
+  box-shadow:none;
+  border:none;
+  border-bottom:1px dotted #ccc;
+  outline:none;
+}
+
+.form span{
+  display:inline-block;
+}
+
+.time{
+  overflow:hidden;
+  box-shadow:none;
+  border:0;
+  outline:none;
+  margin:auto;
+  display:inline-block;
+}
+
+
+.succeed{
+    padding:10px 10px 10px 10px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    font-size:16px;
+    margin:auto;
+    width:60px;
+    height:40px;
+    border:0;
+    position:relative;
+    background-color:rgb(80,110,110);
+    background-size:66px 28px,68px 29px;
+    -webkit-transition:background-color 1s;
+    border-radius:5px;
+}
+.succeed:hover{background-color:rgb(150,80,80)}
+
+.failed{
+    padding:10px 10px 10px 10px;
+    text-decoration:none;
+    color:gray;
+    font-weight:bold;
+    font-size:16px;
+    margin:auto;
+    width:60px;
+    height:40px;
+    border:0;
+    position:relative;
+    background-color:#FFD39B;
+    background-size:66px 28px,68px 29px;
+    -webkit-transition:background-color 1s;
+    border-radius:5px;
+}
+#right{
+width:20%;
+float:left;
+}
+
+#clear{
+  clear:both;
+}
+
+@font-face {
+  font-family: 'loginform-icon';
+  src: url("font/loginform-icon.eot");
+  src: url("font/loginform-icon.eot?#iefix") format('embedded-opentype'),
+       url("font/loginform-icon.woff") format('woff'),
+       url("font/loginform-icon.ttf") format('truetype'),
+       url("font/loginform-icon.svg#loginform-icon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
