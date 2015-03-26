@@ -1,0 +1,55 @@
+{%extends 'index.html'%}
+
+
+{%block style%}
+<link rel="stylesheet" href="{{static_url('css/chating.css')}}" title="" type="text/css" />
+{%end%}
+
+
+{%block script%}
+<script type="text/javascript" src="{{static_url('js/chating.js')}}" charset="utf-8"></script>
+{%end%}
+
+
+{%block content%}
+
+<div id="divMain">
+    <div class="divtop">
+        <div class="divL">
+            <p>{{topic['title']}}</p>
+            <div class="divShow" id="divContent"></div>
+        </div>
+        <div class="divR">
+            <p>参与人员</p>
+            <div class="divShow" id="divOnLine"></div>
+        </div>
+    </div>
+    <div class="divBot">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="2" id="divFace" class="pb"></td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="txtContent" cols="64" rows="3" class="txt" name="msg"></textarea>
+                </td>
+                <td class="pl">
+                    <input id="Button1" type="button" value="发送" class="btn" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="pt">
+                    发送不能为空
+                </td>
+            </tr>
+        </table>
+    </div>
+    <span id="divMsg" class="clsTip">正在发送数据...</span>
+</div>
+
+{%if cookieName==topic['owner']%}
+<div class="del">
+    <a href="javascript:void(0)">删除聊天室</a>
+</div>
+{%end%}
+{%end%}

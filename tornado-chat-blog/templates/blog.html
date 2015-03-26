@@ -1,0 +1,48 @@
+{%extends 'index.html'%}
+
+
+{%block style%}
+<link rel="stylesheet" href="{{static_url('css/blog.css')}}" title="" type="text/css" />
+{%end%}
+
+
+{%block script%}
+<script type="text/javascript" src="{{static_url('js/blog.js')}}" charset="utf-8"></script>
+{%end%}
+
+ 
+{%block content%}
+<div class='main'>
+  <h2><a href="/user/{{blog['owner']}}">{{blog['owner']}}的专栏</a></h2>
+  <br/>
+  <p class='title'>{{blog['title']}}</p>
+  <p class='posttime'>{{blog['postTime']}}</p>
+  <br/>
+  <div class='content'>
+    {%raw blog['content']%}
+  </div>
+</div>
+
+<div class="comment-list">
+  <ul>
+  {%for i in comments%}
+	<li class="each">
+	  <a href='/user/{{i['owner']}}' class='text-success'>{{i['owner']}}</a>: 
+	  &nbsp;&nbsp;<label class='posttime'>{{i['postTime']}}</label><br />
+	  <label class='content'>{{i['content']}}</label>
+	</li>
+  {%end%}
+</ul>
+</div>
+
+<div>
+	<form action='/comment/{{blog['articleId']}}' method='post' class='form'>
+		<div class='comment'>
+			<label>评论</label>
+			<textarea rows='20' type='text' name='comment' class='input-comment' placeholder='请输入评论'></textarea>
+		</div>
+		<button type='submit' class='btn'>评论</button>
+	</form>
+</div>
+{%end%}
+

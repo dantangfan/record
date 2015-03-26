@@ -1,0 +1,70 @@
+{%extends 'index.html'%}
+
+
+{%block style%}
+<link rel="stylesheet" href="{{static_url('css/chat.css')}}" title="" type="text/css" />
+{%end%}
+
+
+{%block script%}
+<script type="text/javascript" src="{{static_url('js/chat.js')}}" charset="utf-8"></script>
+{%end%}
+
+
+{%block content%}
+<div>
+    {%if not cookieName%}
+    <p>请先登录再查看群聊</p>
+    {%else%}
+    <div class="new-topic">
+        <a href="javascript:void(0)">发起聊天</a>
+        <form action="/chat" method="post">
+            <div>
+                <label>主题</label>
+                <input type="text" class="topic-name" name="topic" placeholder="主题" />
+            </div>
+            <div>
+                <label>聊天室密码</label>
+                <input type="password" class="password" name="password" placeholder='密码'>
+            </div>
+            <div style="clear:both;"></div>
+            <div class='form-group'>
+		        <button type='submit' class='btn'>确定</button>
+		    </div>
+        </form>
+    </div>
+    <div class="topic-list">
+        <p class="p1">群聊主题</p>
+        <ul>
+            {%for topic in group%}
+            <li>
+                <div class="topic">
+                    <!--<a href="/chating/{{topic['chatId']}}">{{topic["title"]}}</a>-->
+                    <a href="javascript:void(0)" class="click">{{topic["title"]}}</a>
+                    <div style="clear:both;"></div>
+                    <p class="p2">发起人：{{topic["owner"]}}</p>
+                    <p class="p3" title="{{topic['chatId']}}">{{topic["postTime"]}}</p>
+                    <div style="clear:both;"></div>
+                </div>
+
+            </li>
+            {%end%}
+        </ul>
+    </div>
+    
+    
+    <div class="bg"></div>
+    <div class="login">
+        <div class='form'>
+            <div><p>请输入聊天室密码</p></div>
+            <div class="password">
+                <input type="password" placeholder="password" id="password"/>
+            </div>
+            <div id='btn'>
+                <button type="button" class="btn">确定</button>
+            </div>
+        </div>
+    </div>
+    {%end%}
+</div>
+{%end%}

@@ -1,0 +1,49 @@
+body{
+    background:url('../images/post-bg.jpg');
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+
+.main{
+  margin-left:15%;
+  margin-right:15%;
+}
+
+
+label{
+  font-family:'pen-font';
+}
+
+li{
+  list-style-type:disc;
+}
+    
+.title{
+  height:25px;
+  font-size:16px;
+  width:50%;
+}
+
+.content{
+  width:80%;
+  min-height:300px;
+  font-size:18px;
+  font-family:'song-font';
+}
+
+.btn{
+  float:right;
+  margin-right:15%;
+  width:70px;
+  height:30px;
+  font-size:18px;
+}
+
+.help{
+  margin-left:10%;
+  margin-right:10%;
+  font-family:"pen-font";
+  font-size:15px;
+  background:#fff;
+}

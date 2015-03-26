@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>一起聊</title>
+  <link rel="shortcut icon" href="{{static_url('images/favicon.ico')}}" >
+  <link rel="stylesheet" href="{{static_url('css/style.css')}}" title="" type="text/css" />
+  <script type="text/javascript" src="{{static_url('js/jquery-2.1.1.js')}}" charset="utf-8"></script>
+  {%block style%}
+  <link rel="stylesheet" href="{{static_url('css/index.css')}}" title="" type="text/css" />
+  {%end%}
+
+
+  {%block script%}
+  <script type="text/javascript" src="{{static_url('js/index.js')}}" charset="utf-8"></script>
+  {%end%}
+</head>
+ 
+<body>
+  <header>
+  {%block header%}
+  <ul class='header'>
+	<li><a href='/' class='text-primary'>首页</a></li>
+	<li><a href='/member' class='text-primary target="_blank"'>成员</a></li>
+	<li><a href='/chat' class='text-primary'>群聊</a></li>
+	{%if not cookieName%}
+	<form action='/' method='post' class='form-inline'>
+		<div class='form-group'>
+			<label class='sr-only'>用户名</label>
+			<input type='text' name='username' class='form-control' placeholder='用户名'/>
+		</div>
+		<div class='form-group'>
+			<label class='sr-only'>密码</label>
+			<input type='password' name='password' class='form-control' placeholder='密码'/>
+		</div>
+		<div class='form-group'>
+		  <button type='submit' class='btn btn-success'>登录</button>
+		</div>
+		<div class='form-group'>
+		  <a href='/register'>无帐号，请点击注册</a>
+		</div>
+	</form>
+	{%else%}
+	<li class='after'><a href='/logout' class='text-primary'>注销</a></li>
+	<li class='after-name'><a href='/user/{{cookieName}}' class='text-primary'>欢迎：{{cookieName}}</a></li>
+	{%end%}
+  </ul>
+  <div style="clear:both;"></div>
+  {%end%}
+  </header>
+  
+  <content>
+  {%block content%}
+  <div class='left'>
+    <p class='hhh'>热门的帖子</p>
+    <ul>
+	  {%for i in blogs%}
+	  <li>
+	    <a href='/user/{{i['owner']}}' class='blog-owner'>【{{i['owner']}}】</a>
+	    <a href='/blog/{{i['articleId']}}' class='blog-title'>{{i['title']}}</a></p>
+	    <p class='posttime'>{{i['postTime']}}</p>
+	  </li>
+	  <br/>
+	  {%end%}
+    </ul>
+   </div>
+   <div class='right'>
+     <p class='hhh'>最近的帖子</p>
+   </div>
+  {%end%}
+  <div style="clear:both;"></div>
+  </content>
+  
+  
+  <footer>
+    {%block footer%}
+    {%end%}
+  </footer>
+</body>
+</html>

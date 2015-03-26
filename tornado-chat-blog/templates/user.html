@@ -1,0 +1,52 @@
+{%extends 'index.html'%}
+
+
+{%block style%}
+<link rel="stylesheet" href="{{static_url('css/user.css')}}" title="" type="text/css" />
+{%end%}
+
+
+{%block script%}
+<script type="text/javascript" src="{{static_url('js/user.js')}}" charset="utf-8"></script>
+{%end%}
+
+
+{%block content%}
+<div class="main">
+  {%if not cookieName%}
+  <div class="username">
+    <p>用户:{{user['username']}}</p>
+  </div>
+  {%else%}
+  <div class="new-topic">
+    <a href="/post" target="_blank">发布一个主题</a>
+  </div>
+  {%end%}
+  <div class="main-content">
+  <div style="clear:both;"></div>
+    <div class="recent-topic">
+      <h4>最近发布的主题</h4>
+      <ul>
+        {%for article in articleList%}
+        <li>
+          <a href="/blog/{{article['articleId']}}">{{article['title']}}</a>
+          <p class="posttime">{{article["postTime"]}}</p>
+        </li>
+        {%end%}
+      </ul>
+    </div>
+    <div class="recent-comment">
+      <h4>最近参与的评论</h4>
+      <ul>
+        {%for comment in commentList%}
+        <li>
+          <a href="/blog/{{comment['articleId']}}">{{comment["content"]}}</a>
+          <p class="posttime">{{comment["postTime"]}}</p>
+        </li>
+        {%end%}
+      </ul>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+</div>
+{%end%}

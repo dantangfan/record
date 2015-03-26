@@ -1,0 +1,93 @@
+body{
+margin-top:30px;
+/*min-height:960px;*/
+margin-left:10%;
+margin-right:10%;
+padding:0;
+border:0;
+font-size:20px;
+background:#eee;
+/*长英文自动换行*/
+white-space:normal;
+word-wrap:break-word;
+word-break:break-all;
+}
+
+a,ul,li,p,span,button,label
+{
+text-decoration: none;
+/*text-align: center;*//*文字居中*/
+font-family: 'pen-font';
+vertical-align:baseline;
+}
+
+p,h1,h2,h3,h4,h5{
+  font-family:'font-song';
+}
+
+
+ul,li{
+  list-style-type:none;
+}
+
+input
+{
+text-decoration: none;
+font-family: 'pen-font';
+}
+/***************************/
+header{
+  margin-bottom:30px;
+}
+content{
+  display:block;
+  margin:0;
+}
+header .header{
+  height:10%;
+}
+
+header li{
+  display:inline-block;
+  float:left;
+  width:10%;
+}
+
+header .text-primary{
+  margin: auto 10%;
+}
+
+header .after-name{
+  display:inline-block;
+  float:right;
+  width:20%;
+}
+header .after{
+  display:inline-block;
+  float:right;
+  width:10%;
+}
+header .form-inline{
+  
+}
+header .form-group{
+  display:inline-block;
+  float:left;
+}
+/*****************************/
+footer{
+  margin-bottom:60px;
+}
+@font-face{
+font-family: 'pen-font';
+src: url("font/pen.ttf");
+font-weight:normal;
+font-style:normal;
+}
+
+@font-face{
+font-family: 'font-song';
+src: url("font/font-song.TTF");
+font-weight:normal;
+font-style:normal;
+}

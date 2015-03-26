@@ -1,0 +1,56 @@
+body{
+    background:url('../images/blog-bg.jpg');
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+
+.main li{
+  list-style-type:disc;
+}
+
+.main{
+  margin-left:10%;
+  margin-right:10%;
+}
+.title{
+  text-align:center;
+  font-size:25px;
+}
+
+.posttime{
+  margin:auto;
+  text-align:center;
+  font-size:15px;
+}
+
+.comment{
+  margin-left:5%;
+  margin-right:5%;
+}
+
+.input-comment{
+  height:80px;
+  width:88%;
+  text-align:middle;
+}
+
+.btn{
+  float:right;
+  margin-right:12%;
+}
+
+.comment-list{
+  margin-left:10%;
+  margin-right:10%;
+  border-top:1px dashed #567; 
+}
+
+.comment-list .each{
+  margin-bottom:3%;
+}
+
+.comment-list .posttime{
+  font-size:13px;
+  
+}

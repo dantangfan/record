@@ -1,0 +1,63 @@
+body{
+    background:url('../images/user-bg.jpg');
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+
+h4{
+  font-family:'pen-font';
+}
+.username{
+  float:left;
+}
+
+.new-topic{
+  float:right;
+  background:#abc;
+  color: #012;
+  margin-right:10%;
+  border:1px solid #567;
+  /*box-shadow:0 0 2px 1px #567;
+  text-shadow:0 0 2px #456;*/
+  border-radius:5px;
+  padding:2px;
+  transition: all 200ms linear;
+}
+
+.new-topic:hover {
+    text-shadow:0 0 2px rgb(255,255,255);
+    /*box-shadow:inset 0 1px 0 rgb(86,174,251),0 0 10px 3px rgba(74,162,241,0.5);*/
+    box-shadow:0  0 2px 1px #567;
+}
+
+.main-content{
+  margin:auto;
+}
+
+.recent-topic{
+  float:left;
+  margin-left:4%;
+  margin-right:3%;
+  width:50%;
+}
+
+.recent-topic li{
+  border-top:1px dashed #567;
+  padding-top:2%;
+}
+.recent-topic .posttime{
+  margin-left:60%;
+  font-size:14px;
+}
+.recent-comment{
+  float:right;
+  margin-left:2%;
+  margin-right:3%;
+  width:36%;
+}
+
+.recent-comment .posttime{
+  margin-left:40%;
+  font-size:13px;
+}

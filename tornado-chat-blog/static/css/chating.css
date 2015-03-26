@@ -1,0 +1,120 @@
+body{
+    background:url('../images/chating-bg.jpeg');
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+
+.divShow{
+    border:solid 1px #ccc;
+    height:300px;
+    padding:5px;
+    font-size:15px;
+    overflow-y:scroll;
+}
+
+
+
+.del{
+    display:inline-block;
+    float:right;
+    margin:3%;
+    padding:1%;
+    border:1px solid red;
+    background:#cdc673;
+    border-radius:10px;
+    transition: all 300ms linear;
+}
+.del:hover {
+    text-shadow:0 0 2px rgb(255,255,255);
+    box-shadow:inset 0 1px 0 red,0 0 10px 3px red;
+}
+
+#divMain{
+    border:solid 5px #ccc;
+}
+
+#divMain .divtop{
+    padding:10px;
+}
+
+#divMain .divtop .divL{
+    float:left;
+    width:78%;
+}
+
+#divMain .divtop .divR{
+    float:right;
+    width:20%;
+}
+
+#divMain .divBot{
+    clear:both;
+    padding:10px;
+}
+
+#divMain .divBot .pb{
+    padding-bottom:3px;
+}
+
+#divMain .divBot .pl{
+    padding-left:12px;
+}
+
+#divMain .divBot .pt{
+    padding-top:3px;
+    color:#555;
+}
+
+.clsTip{
+    position:absolute;
+    width:160px;
+    text-align:center;
+    font-size:13px;
+    border:solid 1px #cc3300;
+    margin-top:5px;
+    padding:2px;
+    margin-bottom:5px;
+    background:#ffe0a3;
+    display:none;
+}
+
+.txt{
+    border:#666 1px solid;
+    padding:2px;
+    width:100%;
+}
+
+.btn{
+    border:#666 1px solid;
+    padding:2px;
+    width:100px;
+    height:50px;
+    font-size:20px;
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff,EndColorStr=#ECE9D8)
+}
+
+.msg{
+    margin-left:1%;
+    margin-bottom:1%;
+}
+
+.msg .up .name{
+    float:left;
+    display:inline-block;
+}
+
+.msg .up .posttime{
+    float:right;
+    display:inline-block;
+    font-size:12px;
+}
+
+.msg .down{
+    background:#1ad;
+    line-height:100%;
+    padding:2%;
+    margin:auto;
+    border-radius:10px;
+    /**/display:inline-block;
+}

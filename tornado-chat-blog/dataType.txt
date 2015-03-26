@@ -1,0 +1,20 @@
+CREATE TABLE user(id integer primary key,name text,pw text,level integer);
+
+CREATE TABLE blog(id integer primary key,name text,title text,blog text,time text);  
+
+CREATE TABLE comment(id integer primary key,blogid integer,name text,comment text,time text);
+
+
+
+mongodb.
+db= conn.chat
+
+
+user: password, username(自己起), articleList(list,articleid), commentlist(list), joinTime
+
+article: artilceId, owner(username), commentList(list), content, title, postTime,
+
+comment: commentId, articleId, owner(username), content, postTime
+
+groupchat: chatId, owner(username), password(owner设置密码), title, peopleList(list), msgList(list[name,time,msg]), postTime
+还需要一个chat window

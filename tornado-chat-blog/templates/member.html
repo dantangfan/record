@@ -1,0 +1,27 @@
+{%extends 'index.html'%}
+
+
+{%block style%}
+<link rel="stylesheet" href="{{static_url('css/member.css')}}" title="" type="text/css" />
+{%end%}
+
+
+{%block script%}
+<script type="text/javascript" src="{{static_url('js/member.js')}}" charset="utf-8"></script>
+{%end%}
+
+
+{%block content%}
+{%if not cookieName%}
+<div class="not-login">
+    <p>要查看用户请先登录</p>
+</div>
+{%else%}
+<ul>
+	{%for i in users%}
+	<li class="one"><a href='/user/{{i['username']}}' class='text-success'>{{i['username']}}<small>（注册时间{{i['joinTime']}}）</small></a></li>
+	{%end%}
+	<br/>
+</ul>
+{%end%}
+{%end%}

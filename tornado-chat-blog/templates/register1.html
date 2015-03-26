@@ -1,0 +1,37 @@
+{%extends 'main.html'%}
+
+{%block style%}
+<link rel="stylesheet" href="{{static_url('css/register.css')}}" title="" type="text/css" />
+{%end%}
+
+{%block script%}
+<script src='{{static_url("js/checkpw.js")}}'></script>
+{%end%}
+
+{%block content%}
+<div class="content">
+  <form action="/register" method="post" class="login-form">
+    <div class="username">
+      <input type="text" name="username" placeholder="username" autocomplete="on" value=''/>
+      <span class="user-icon icon">u</span>
+    </div>
+    <div class="password">
+      <input type="password" name="password" placeholder="password" />
+      <span class="password-icon icon">p</span>
+    </div>
+    <div class="password">
+      <input type="password" name="confirm-password" placeholder="confirm password" />
+      <span class="password-icon icon">p</span>
+    </div>
+    <div class="account-control">
+      <button type="submit" onmousemove="confirmed()">Register</button>
+    </div>
+    <p class="not-registered">
+    <a style="color:red;">User already exist</a><br />
+    Already got an account?<a href='/'>Login here</a>
+    </p>
+  </form>
+</div>
+<div style="text-align:center;clear:both">
+</div>
+{%end%}

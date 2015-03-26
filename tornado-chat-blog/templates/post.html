@@ -1,0 +1,41 @@
+{%extends 'index.html'%}
+
+
+{%block style%}
+<link rel="stylesheet" href="{{static_url('css/post.css')}}" title="" type="text/css" />
+{%end%}
+
+
+{%block script%}
+<script type="text/javascript" src="{{static_url('js/post.js')}}" charset="utf-8"></script>
+{%end%}
+
+
+{%block content%}
+<form action='/post' method='post' class='main'>
+	<div class='first'>
+		<label>标题</label>
+		<input type='text' name='title' class='title' placeholder='请输入标题'/>
+	</div>
+	<div class='second'>
+		<label>正文</label>
+		<textarea rows='20' type='text' name='blog' class='content' placeholder='请输入文章正文'></textarea>
+	</div>
+	<button type='submit' class='btn'>发布</button>
+	<div style="clear:both;"></div>
+</form>
+<div>
+    <br><br>
+    <button id='help'>使用帮助</button>
+    <div class="help">
+      <pre>
+        "##测试"  效果如
+        <h2>测试</h2>
+        "*测试"  效果如
+        <ul><li>测试</li></ul>
+        "****"  和  "----"  效果如
+        <hr>
+      </pre>
+    </div>
+</div>
+{%end%}

@@ -1,0 +1,73 @@
+header .header{
+  height:10%;
+}
+
+header li{
+  display:inline-block;
+  float:left;
+  width:10%;
+}
+
+header .text-primary{
+  margin: auto 10%;
+}
+
+header .after-name{
+  display:inline-block;
+  float:right;
+  width:20%;
+}
+header .after{
+  display:inline-block;
+  float:right;
+  margin-right:5%;
+  width:10%;
+}
+header .form-inline{
+  
+}
+header .form-group{
+  display:inline-block;
+}
+
+/************************************/
+
+body{
+background:url('../images/index-bg.jpg');
+    filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+    -moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+
+.hhh{
+  margin-left:10%;
+}
+.left {
+  display:inline-block;
+  width:50%;
+  margin-left:4%;
+  margin-right:3%;
+  background:#fff;
+  box-shadow:0 0 2px 1px rgb(200,223,244);/*box 阴影*/
+  border-radius:5px;/*内框弧形*/
+}
+
+.left ul li{
+  border-top: #D0D0D0 dashed 1px;
+  padding-top:5%;
+}
+
+.left .posttime{
+  font-size:13px;
+  margin-left:60%;
+}
+.right{
+  display:inline-block;
+  width:37%;
+  float:right;
+  margin-left:2%;
+  margin-right:3%;
+  background:#fff;
+  box-shadow:0 0 2px 1px rgb(200,223,244);
+  border-radius:5px;
+}
